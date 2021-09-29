@@ -1,4 +1,5 @@
 import discord
+import os
 import asyncio
 import random
 from discord.ext import commands
@@ -14,7 +15,8 @@ async def on_ready():
 
 client = discord.Client()
 
-token = "ODkxNTEwMTY0NTgxMTIyMDg4.YU_Zig.hh1KlLfRgzDY72OjmIVAi8t1IT8"
+access_token = os.environ["BOT_TOKEN"]
+token = "access_token"
 
 @client.event
 async def on_ready():
@@ -2305,6 +2307,6 @@ async def on_message(message):
 async def 따라해(ctx, *, text):
     await ctx.send(text)
 
-
-bot.run('ODkxNTEwMTY0NTgxMTIyMDg4.YU_Zig.hh1KlLfRgzDY72OjmIVAi8t1IT8')
+access_token = os.environ["BOT_TOKEN"]
+bot.run(access_token)
 client.run(token)
